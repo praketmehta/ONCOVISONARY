@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONCOVISIONARY COVER PAGE</title>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Style for the button */
+        .btn {
+            background-color: #160b7a;
+            color: rgb(255, 255, 255);
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: grab;
+            transition: all 0.3s ease;
+            margin: 10px; /* Add margin for spacing */
+        }
+
+        /* Hover effect for the button */
+        .btn:hover {
+            background-color: #14e0ff;
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Modal container - hidden by default */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.5s; /* Animation on popup */
+        }
+
+        /* Modal content */
+        .modal-content {
+            background-color: #0d034e;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 300px;
+            animation: popupAnimation 0.5s; /* Animation on popup content */
+        }
+
+        /* Options inside the modal */
+        .option {
+            padding: 10px;
+            margin: 10px;
+            background-color: #55ccff;
+            color: rgb(255, 255, 255);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .option:hover {
+            background-color: #0056b3;
+        }
+
+        /* Close button */
+        .close-btn {
+            background-color: red;
+            color: white;
+            padding: 10px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background-color: darkred;
+        }
+
+        /* Animation for modal fade-in */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        /* Animation for popup content */
+        @keyframes popupAnimation {
+            from {transform: scale(0.5);}
+            to {transform: scale(1);}
+        }
+        
+        .p1 {
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bg-img">
+            <img src="bg-image/2.png" alt="#">
+        </div>
+
+        <div class="m-heading">
+            <h3><span id="title"></span></h3>
+            <p class="p1">Early Detection: AI-powered algorithms analyze images to identify early signs of tumors, which might be too subtle for human detection. This is critical in cancers like breast, lung, and prostate cancer.
+                Diagnosis: Medical image analysis helps in distinguishing between benign and malignant tissues, reducing false positives and unnecessary biopsies. Pathology images can also be analyzed to identify specific cancer types.
+                Tumor Segmentation: AI algorithms segment tumors from surrounding tissues, allowing for accurate measurement of tumor size and spread.
+                Treatment Planning: Imaging helps oncologists plan treatments such as surgery, radiation therapy, and chemotherapy by providing precise maps of the tumor’s location.
+                Monitoring: Medical images are used to monitor how the cancer is responding to treatment over time, tracking changes in tumor size or spread.
+                Prognosis: By analyzing images, AI can help predict the course of cancer, helping in personalized treatment plans.
+            </p>
+            <!-- New Home Page button -->
+            <button class="btn" id="homePageBtn">Home Page</button>
+        </div>
+    </div>
+
+    <script>
+        // Typed.js for animated text
+        var typed = new Typed('#title', {
+            strings: ['ONCOVISIONARY'],
+            typeSpeed: 150,
+            loop: false
+        });
+
+        // Redirect to index.html when "Home Page" button is clicked
+        var homePageButton = document.getElementById("homePageBtn");
+
+        homePageButton.addEventListener('click', function() {
+            window.location.href = 'index.html';  // Redirect to index.html
+        });
+    </script>
+</body>
+</html>
